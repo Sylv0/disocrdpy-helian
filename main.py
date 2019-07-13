@@ -1,3 +1,4 @@
+import os
 import discord
 import json
 import datetime
@@ -1343,4 +1344,5 @@ async def reload_db(ctx):
         await ctx.send('DB Reload complete!')
 
 bot.loop.create_task(gf_weibo())
-bot.run('')
+print(os.environ["BOT_TOKEN"])
+bot.run(os.environ["BOT_TOKEN"])
