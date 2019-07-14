@@ -12,7 +12,7 @@ import random as r
 import difflib
 from discord.ext import commands
 
-prefix = '/'
+prefix = os.environ["BOT_PREFIX"] or '/'
 bot = commands.Bot(command_prefix=f'{prefix}')
 bot.remove_command("help")
 
