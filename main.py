@@ -1343,5 +1343,5 @@ async def reload_db(ctx):
 
         await ctx.send('DB Reload complete!')
 
-bot.loop.create_task(gf_weibo())
+# bot.loop.create_task(gf_weibo())
 bot.run(os.environ["BOT_TOKEN"])
