@@ -68,7 +68,7 @@ async def time_convert(time):
         return time
 
 def is_owner(ctx):
-        return ctx.message.author.id in []
+        return ctx.message.author.id in ["131096116849672192"]
 
 def translator(content, language):
         url = 'https://translation.googleapis.com/language/translate/v2'
@@ -1294,9 +1294,9 @@ async def stats(ctx):
                 elif 'Voice' in str(type(channel)):
                         total_voice_channel_cnt += 1
 
-        msg = discord.Embed(color=7458112, title="Helian v2.1")
-        msg.add_field(name=lang_strings['stats']['developer'][lang], value="iorph#0001", inline=True)
-        msg.add_field(name=lang_strings['stats']['developer_id'][lang], value="104922432955035648", inline=True)
+        msg = discord.Embed(color=7458112, title="Helian v2.2")
+        msg.add_field(name=lang_strings['stats']['developer'][lang], value="Sylv0#0562", inline=True)
+        msg.add_field(name=lang_strings['stats']['developer_id'][lang], value="131096116849672192", inline=True)
         msg.add_field(name=lang_strings['stats']['bot_id'][lang], value=bot.user.id, inline=True)
         msg.add_field(name=lang_strings['stats']['memory'][lang], value="{} MB".format(memory_usage), inline=True)
         msg.add_field(name=lang_strings['stats']['presence'][lang], value=lang_strings['stats']['presence_value'][lang].format(total_server_cnt, total_text_channel_cnt, total_voice_channel_cnt), inline=True)
@@ -1344,5 +1344,4 @@ async def reload_db(ctx):
         await ctx.send('DB Reload complete!')
 
 bot.loop.create_task(gf_weibo())
-print(os.environ["BOT_TOKEN"])
 bot.run(os.environ["BOT_TOKEN"])
